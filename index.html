@@ -22,6 +22,25 @@
         p {
             color: #777;
         }
+        img {
+            float: left;
+            margin-right: 20px;
+            max-width: 300px; /* Adjust the maximum width of the image as needed */
+        }
+        .important-links {
+            float: right;
+            width: 40%; /* Adjust the width of the links section as needed */
+        }
+        .important-links h3 {
+            color: #555;
+        }
+        .important-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .important-links li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -29,11 +48,21 @@
     <header>
         <h1>IBM Storage Fusion</h1>
     </header>
-    <a href="http://www.youtube.com/watch?feature=player_embedded&v=jcJ_hlprrNk
-" target="_blank"><img src="http://img.youtube.com/vi/jcJ_hlprrNk/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+    
     <section>
         <h2>About Storage Fusion</h2>
+        <a href="http://www.youtube.com/watch?feature=player_embedded&v=jcJ_hlprrNk
+" target="_blank"><img src="http://img.youtube.com/vi/jcJ_hlprrNk/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+        <div class="important-links">
+            <h3>Important Links</h3>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </div>
         <p>
             Storage Fusion is a hybrid cloud data services solution for containers and software-defined infrastructures
             (compute, storage, and data protection all in one) for OpenShift. It can run both on premises or in the cloud of any
