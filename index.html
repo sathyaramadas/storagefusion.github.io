@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Enterprise Product</title>
+    <title>Your Data Center Product</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -11,6 +11,7 @@
             padding: 0;
             background-color: #f8f8f8;
             color: #333;
+            overflow-x: hidden;
         }
         header {
             background-color: #333;
@@ -21,6 +22,7 @@
         section {
             padding: 40px;
             text-align: center;
+            transition: transform 0.5s ease;
         }
         h1 {
             color: #333;
@@ -67,16 +69,28 @@
             padding: 20px;
             text-align: center;
         }
+        /* Animation */
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        .animate {
+            animation: slideIn 1s ease;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Your Enterprise Product</h1>
-        <p>Transforming Data Centers with On-Premises Excellence</p>
+        <h1>Your Data Center Product</h1>
+        <p>Transforming Data Centers with Cutting-Edge Solutions</p>
     </header>
 
-    <section>
+    <section class="animate">
         <h2>Revolutionize Your Data Center</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique massa ut libero ullamcorper, sed facilisis arcu fermentum. Integer at magna vel ligula malesuada ullamcorper.
@@ -112,6 +126,18 @@
         <p>&copy; 2024 Your Company Name</p>
     </footer>
 
+    <script>
+        // Trigger animation when the section becomes visible in the viewport
+        document.addEventListener('scroll', function() {
+            var section = document.querySelector('.animate');
+            var rect = section.getBoundingClientRect();
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            
+            if (rect.top <= windowHeight * 0.75) {
+                section.classList.add('animate');
+            }
+        });
+    </script>
+
 </body>
 </html>
-
