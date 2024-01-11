@@ -3,141 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Data Center Product</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-        }
-        section {
-            padding: 40px;
-            text-align: center;
-            transition: transform 0.5s ease;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 1.1em;
-            color: #555;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            text-decoration: none;
-            color: #fff;
-            background-color: #3498db;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #2980b9;
-        }
-        .rack-image {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-        }
-        .important-links {
-            background-color: #fff;
-            padding: 40px;
-            text-align: left;
-            border-radius: 5px;
-            margin-top: 40px;
-        }
-        .features-section {
-            background-color: #f4f4f4;
-            padding: 40px;
-            text-align: left;
-            border-radius: 5px;
-            margin-top: 40px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        /* Animation */
-        @keyframes slideIn {
-            from {
-                transform: translateY(50px);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-        .animate {
-            animation: slideIn 1s ease;
-        }
-    </style>
+    <title>OpenAI Product Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Your Data Center Product</h1>
-        <p>Transforming Data Centers with Cutting-Edge Solutions</p>
+        <div class="logo">OpenAI</div>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="animate">
-        <h2>Revolutionize Your Data Center</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique massa ut libero ullamcorper, sed facilisis arcu fermentum. Integer at magna vel ligula malesuada ullamcorper.
-        </p>
-        <img src="path/to/rack-image.jpg" alt="Data Center Rack" class="rack-image">
-        <a href="#cta" class="cta-button">Get Started</a>
+    <section class="hero">
+        <h1>Unlock the Power of AI with OpenAI</h1>
+        <p>Your pathway to intelligent solutions and breakthroughs.</p>
+        <a href="#features" class="cta-button">Explore Features</a>
     </section>
 
-    <section id="cta" style="background-color: #fff;">
-        <h2>Explore Important Links</h2>
-        <div class="important-links">
-            <ul>
-                <li><a href="#">Installation Guide</a></li>
-                <li><a href="#">User Documentation</a></li>
-                <li><a href="#">Support &amp; FAQs</a></li>
-                <li><a href="#">Community Forum</a></li>
-            </ul>
+    <section id="features" class="features">
+        <h2>Key Features</h2>
+        <div class="feature-card">
+            <h3>Advanced NLP</h3>
+            <p>State-of-the-art Natural Language Processing for human-like interactions.</p>
         </div>
+        <div class="feature-card">
+            <h3>Machine Learning Models</h3>
+            <p>Powerful machine learning models to drive innovation in your projects.</p>
+        </div>
+        <!-- Add more feature cards as needed -->
     </section>
 
-    <section class="features-section">
-        <h2>Core Features</h2>
-        <ul>
-            <li>Highly Scalable Architecture</li>
-            <li>Robust Data Security Measures</li>
-            <li>Seamless Integration with Existing Infrastructure</li>
-            <li>Real-time Monitoring and Analytics</li>
-            <li>Automated Backup and Disaster Recovery</li>
-        </ul>
+    <section id="pricing" class="pricing">
+        <h2>Pricing Plans</h2>
+        <div class="price-card">
+            <h3>Basic</h3>
+            <p>Perfect for small projects</p>
+            <span class="price">$99/month</span>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+        <div class="price-card">
+            <h3>Pro</h3>
+            <p>For professional use and larger teams</p>
+            <span class="price">$199/month</span>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+        <!-- Add more pricing cards as needed -->
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance? Reach out to our support team.</p>
+        <a href="mailto:support@openai.com" class="cta-button">Contact Support</a>
     </section>
 
     <footer>
-        <p>&copy; 2024 Your Company Name</p>
+        <p>&copy; 2024 OpenAI</p>
     </footer>
 
-    <script>
-        // Trigger animation when the section becomes visible in the viewport
-        document.addEventListener('scroll', function() {
-            var section = document.querySelector('.animate');
-            var rect = section.getBoundingClientRect();
-            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-            
-            if (rect.top <= windowHeight * 0.75) {
-                section.classList.add('animate');
-            }
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
