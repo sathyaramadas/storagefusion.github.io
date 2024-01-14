@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Google Search Example</title>
+</head>
+<body>
+
+    <!-- Google Search Bar -->
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search Google">
+        <button type="button" onclick="performSearch()">Search</button>
+    </form>
+
+    <!-- Search Results Container -->
+    <div id="search-results"></div>
+
+    <!-- Google Programmable Search Engine API Script -->
+    <script>
+        function performSearch() {
+            // Get the search query from the input field
+            var query = document.getElementById('search-input').value;
+
+            // Google Programmable Search Engine API Key and Custom Search Engine ID
+            var apiKey = 'AIzaSyA02T9aQ12xNcK1kusUt9ClwPpdLed_BMQ';
+            var cx = '74cfd6259d7cd4656';
+
+            // Google Programmable Search Engine API URL
+            var apiUrl = `https://www.googleapis.com/customsearch/v1?q=${query}&key=${apiKey}&cx=${cx}`;
+
+            // Fetch search results from the API
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => displaySearchResults(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function displaySearchResults(data) {
+            // Clear previous search results
+            document.getElementById('search-results').innerHTML = '';
+
+            // Display search results
+            if (data.items) {
+                data.items.forEach(item => {
+                    var resultElement = document.createElement('div');
+                    resultElement.innerHTML = `<h3>${item.title}</h3><p>${item.snippet}</p><a href="${item.link}" target="_blank">${item.link}</a>`;
+                    document.getElementById('search-results').appendChild(resultElement);
+                });
+            } else {
+                document.getElementById('search-results').innerHTML = '<p>No results found.</p>';
+            }
+        }
+    </script>
+
+</body>
+</html>
