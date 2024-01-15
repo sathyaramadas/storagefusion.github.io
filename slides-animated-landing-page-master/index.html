@@ -25,7 +25,43 @@
 
 	<!-- Fonts and Material Icons -->
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
- 
+        <style>
+    /* Add some basic styling for the dropdown menu */
+	    .menu {
+	      list-style-type: none;
+	      margin: 0;
+	      padding: 0;
+	    }
+	
+	    .menu li {
+	      display: inline-block;
+	      position: relative;
+	    }
+	
+	    .menu a {
+	      display: block;
+	      padding: 10px;
+	      text-decoration: none;
+	      color: #333;
+	    }
+	
+	    .menu ul {
+	      display: none;
+	      position: absolute;
+	      top: 100%;
+	      left: 0;
+	      background-color: #f9f9f9;
+	      border: 1px solid #ddd;
+	    }
+
+	    .menu li:hover > ul {
+	      display: block;
+	    }
+	
+	    .menu ul li {
+	      display: block;
+	    }
+  </style>
 </head>
 <body class="slides chain simplifiedMobile animated">
 		
