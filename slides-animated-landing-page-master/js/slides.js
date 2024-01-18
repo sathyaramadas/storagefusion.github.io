@@ -1090,6 +1090,7 @@ $(document).ready(function() { "use strict";
       navigation = $(navParent).find('ul'),
       slidesNumber = $('.slide:not(.exclude)').length;
 
+alert( $(navigation).length);                      
   if ($(navigation).length > 0) {
 
     if ($(navigation).is(':empty')) {
