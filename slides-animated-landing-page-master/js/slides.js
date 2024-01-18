@@ -1100,7 +1100,7 @@ $(document).ready(function() { "use strict";
           // Add Tooltips
           var title = $('.slide:not(.exclude):eq('+(i - 1)+')').data('title');
           if (title === undefined) {
-            $(element).append('<li>"testing"</li>');
+            $(element).append('<li data-title="title'"></li>');
           } else {
             $(element).append('<li data-title="'+title+'"></li>');
           }
