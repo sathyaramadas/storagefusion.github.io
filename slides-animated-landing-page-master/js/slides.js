@@ -1099,7 +1099,8 @@ $(document).ready(function() { "use strict";
 
           // Add Tooltips
           var title = $('.slide:not(.exclude):eq('+(i - 1)+')').data('title');
-           title = 'test'
+           title = 'test';
+           alert(title);
           if (title === undefined) {
             $(element).append('<li data-title="title'"></li>');
           } else {
