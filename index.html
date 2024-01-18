@@ -1,71 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAI Product Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Slide Presentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .presentation {
+      display: flex;
+    }
+
+    .slides {
+      flex: 2;
+      padding: 20px;
+    }
+
+    .navigation {
+      flex: 1;
+      padding: 20px;
+      background-color: #eee;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav-item {
+      margin-bottom: 10px;
+      cursor: pointer;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">OpenAI</div>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="presentation">
+    <div class="slides">
+      <div class="slide active">
+        <h1>Slide 1</h1>
+        <p>Content for Slide 1...</p>
+      </div>
+      <div class="slide">
+        <h1>Slide 2</h1>
+        <p>Content for Slide 2...</p>
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
 
-    <section class="hero">
-        <h1>Unlock the Power of AI with OpenAI</h1>
-        <p>Your pathway to intelligent solutions and breakthroughs.</p>
-        <a href="#features" class="cta-button">Explore Features</a>
-    </section>
+    <div class="navigation">
+      <div class="nav-item" onclick="showSlide(1)">Slide 1</div>
+      <div class="nav-item" onclick="showSlide(2)">Slide 2</div>
+      <!-- Add more navigation items with corresponding slide numbers -->
+    </div>
+  </div>
 
-    <section id="features" class="features">
-        <h2>Key Features</h2>
-        <div class="feature-card">
-            <h3>Advanced NLP</h3>
-            <p>State-of-the-art Natural Language Processing for human-like interactions.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Machine Learning Models</h3>
-            <p>Powerful machine learning models to drive innovation in your projects.</p>
-        </div>
-        <!-- Add more feature cards as needed -->
-    </section>
+  <script>
+    function showSlide(slideNumber) {
+      // Hide all slides
+      var slides = document.querySelectorAll('.slide');
+      slides.forEach(function(slide) {
+        slide.classList.remove('active');
+      });
 
-    <section id="pricing" class="pricing">
-        <h2>Pricing Plans</h2>
-        <div class="price-card">
-            <h3>Basic</h3>
-            <p>Perfect for small projects</p>
-            <span class="price">$99/month</span>
-            <a href="#" class="cta-button">Get Started</a>
-        </div>
-        <div class="price-card">
-            <h3>Pro</h3>
-            <p>For professional use and larger teams</p>
-            <span class="price">$199/month</span>
-            <a href="#" class="cta-button">Get Started</a>
-        </div>
-        <!-- Add more pricing cards as needed -->
-    </section>
+      // Show the selected slide
+      var selectedSlide = document.querySelector('.slide:nth-child(' + slideNumber + ')');
+      selectedSlide.classList.add('active');
+    }
+  </script>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or need assistance? Reach out to our support team.</p>
-        <a href="mailto:support@openai.com" class="cta-button">Contact Support</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 OpenAI</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
 
